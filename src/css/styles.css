@@ -19,6 +19,7 @@ body {
   margin: 0 auto;
   font-size: calc(16vw / 4.02);
   background: #fefdfb;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 441px) {
