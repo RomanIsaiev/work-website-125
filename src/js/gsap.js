@@ -5,6 +5,71 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
+// let splitSubtitle = new SplitText('.hero-title-box .subtitle', {
+//   type: 'words',
+// });
+// let splitTitle = new SplitText('.hero-title-box .title', {
+//   type: 'words',
+// });
+
+// let heroTl = gsap.timeline();
+
+// heroTl
+//   .from('.date-container', {
+//     duration: 1,
+//     y: 50,
+//     opacity: 0,
+//     ease: 'power2.out',
+//   })
+//   .from(
+//     '.hero-title-box',
+//     {
+//       y: -50,
+//       opacity: 0,
+//       duration: 1,
+//       ease: 'power2.out',
+//     },
+//     '<'
+//   )
+//   .from(splitSubtitle.words, {
+//     duration: 1,
+//     y: 50,
+//     opacity: 0,
+//     stagger: 0.2,
+//     ease: 'power2.out',
+//   })
+//   .from(
+//     splitTitle.words,
+//     {
+//       duration: 2,
+//       y: 100,
+//       opacity: 0,
+//       stagger: 0.15,
+//       ease: 'power3.out',
+//     },
+//     '-=0.5'
+//   )
+//   .from(
+//     '.person-photo',
+//     {
+//       y: 50,
+//       opacity: 0,
+//       duration: 1,
+//       ease: 'power2.out',
+//     },
+//     '-=0.5'
+//   )
+//   .from(
+//     '.waiting-text',
+//     {
+//       y: 50,
+//       opacity: 0,
+//       duration: 1,
+//       ease: 'power2.out',
+//     },
+//     '-=0.5'
+//   );
+
 let splitSubtitle = new SplitText('.hero-title-box .subtitle', {
   type: 'words',
 });
@@ -12,7 +77,7 @@ let splitTitle = new SplitText('.hero-title-box .title', {
   type: 'words',
 });
 
-let heroTl = gsap.timeline();
+let heroTl = gsap.timeline({ paused: true }); // Ставим на паузу, чтобы запустить после прелоадера
 
 heroTl
   .from('.date-container', {
@@ -69,6 +134,27 @@ heroTl
     },
     '-=0.5'
   );
+
+// Таймлайн для прелоадера
+const preloaderTl = gsap.timeline({ paused: true });
+
+preloaderTl.to('.preloader-action', {
+  duration: 1,
+  opacity: 0,
+  y: -100,
+  ease: 'power3.inOut',
+  onComplete: () => {
+    document.querySelector('.preloader-action').style.display = 'none';
+    heroTl.play(); // Запускаем анимацию главного блока
+  },
+});
+
+// Запуск по кнопке
+document.querySelector('.preloader-btn').addEventListener('click', () => {
+  preloaderTl.play();
+});
+
+// ***
 
 let aboutTl = gsap.timeline({
   scrollTrigger: {
