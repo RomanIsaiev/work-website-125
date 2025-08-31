@@ -1,41 +1,23 @@
 @font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-LIGHT.TTF);
+  font-family: 'Helvetica Neue';
+  src: url(../fonts/HelveticaNeue-Thin.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(../fonts/HelveticaNeue-Light.ttf);
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-BOOK.TTF);
+  font-family: 'Helvetica Neue';
+  src: url(../fonts/HelveticaNeue-Roman.ttf);
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-MEDIUM.TTF);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-DEMI.TTF);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-BOLD.TTF);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-EXTRABOLD.TTF);
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url(../fonts/FUTURAPT-HEAVY.TTF);
-  font-weight: 900;
+  font-family: 'Snell Roundhand';
+  src: url(../fonts/SnellRoundhand-Regular.ttf);
+  font-weight: 400;
 }

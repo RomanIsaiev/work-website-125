@@ -12,25 +12,561 @@
 @import url(../css/utils/variables.css);
 @import url(../css/utils/common.css);
 
+html,
+body {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: calc(16vw / 4.02);
+  background: #fefdfb;
+}
+
+@media screen and (min-width: 441px) {
+  html,
+  body {
+    font-size: 17.5px;
+  }
+}
+
 .section {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
-  padding: 0 16px;
+  padding: 0 1.25rem;
+}
 
-  @media (360px <= width) {
-    max-width: 360px;
-  }
+.hero {
+  padding-top: 1.25rem;
+  padding-bottom: 6.5rem;
+  background-image: url(../img/hero/hero-bg-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-  @media (768px<=width) {
-    max-width: 768px;
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/hero/hero-bg-2x.jpg);
   }
+}
 
-  @media (1280px<=width) {
-    max-width: 1280px;
-    padding: 0 24px;
+.container {
+}
+
+.hero .date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 11.875rem;
+  gap: 0.25rem;
+}
+
+.hero .date {
+  color: #fff;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.07em;
+  text-transform: lowercase;
+}
+
+.hero .date-icon {
+  width: 1.4375rem;
+}
+
+.hero .subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 1.375em;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero .title {
+  margin-top: -1rem;
+
+  color: #fff;
+  text-align: center;
+  font-family: 'Snell Roundhand';
+  font-size: 2.875em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 2.875rem */
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+
+  margin-bottom: 13.625rem;
+}
+
+.hero .person-photo {
+  width: 8.25rem;
+  margin: 0 auto 0.625rem;
+}
+
+.hero .waiting-text {
+  color: #fff;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 0.9375em;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 90%; /* .8438rem */
+  letter-spacing: 0.0656em;
+  text-transform: lowercase;
+
+  max-width: 5.875rem;
+  margin: 0 auto;
+}
+
+/* about site */
+
+.about-site {
+  padding: 3.75rem 0;
+  overflow: hidden;
+}
+
+.about-site .container {
+}
+
+.about-site .title {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 2.2rem */
+  text-transform: uppercase;
+
+  max-width: 22.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-site .text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 1.2rem */
+
+  max-width: 19.375rem;
+  margin-bottom: 3.625rem;
+}
+
+.about-site .images-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 32.5rem;
+  margin-top: -8rem;
+}
+
+.about-site-key {
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+  width: 10rem;
+  /* transform: rotate(-45deg) translateY(34px) translateX(34px); */
+  transform: rotate(-45deg);
+
+  margin-right: -3.125rem;
+}
+
+.about-site-lock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* transform: translateX(-50px); */
+  margin-left: -3.125rem;
+  width: 11.25rem;
+}
+
+.about-site-line {
+  display: block;
+  width: 14.3125rem;
+  margin: 0 auto 1.5rem;
+}
+
+.end-wrap {
+  margin-top: -7.5rem;
+}
+
+.about-site .title.end {
+  text-align: right;
+  max-width: 20.875rem;
+  margin: 0 0 0.5rem auto;
+}
+
+.about-site .text.end {
+  text-align: right;
+  max-width: 21.625rem;
+  margin: 0 0 0 auto;
+}
+
+.just-bg {
+  width: 100%;
+  height: 48rem;
+  background-image: url(../img/just-bg-1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .just-bg {
+    background-image: url(../img/just-bg-2x.png);
   }
+}
+
+/* wait-you */
+
+.wait-you {
+  padding: 5rem 0;
+}
+
+.wait-you .container {
+}
+
+.wait-you .title {
+  color: #adc69d;
+  font-family: 'Helvetica Neue';
+  font-size: 2.3473em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%; /* 2.5821rem */
+  text-transform: uppercase;
+}
+
+.wait-you .subtitle {
+  margin-top: -1rem;
+  color: #090909;
+  font-family: 'Snell Roundhand';
+  font-size: 4.3412em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 80%; /* 3.473rem */
+  letter-spacing: -0.0434em;
+
+  margin-bottom: 3.75rem;
+}
+
+.wait-you .list {
+  border-top: 0.0625rem solid #adc69d;
+  margin-bottom: 3.4375rem;
+}
+
+.wait-you .list-item {
+  padding: 3.75rem 0;
+
+  border-bottom: 0.0625rem solid #adc69d;
+}
+
+.wait-you .item-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2.125rem;
+}
+
+.wait-you .time {
+  color: #adc69d;
+  font-family: 'Helvetica Neue';
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%; /* 3.3rem */
+  text-transform: uppercase;
+
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+}
+
+.wait-you .item-text-box {
+}
+
+.wait-you .item-title {
+  color: #090909;
+  font-family: 'Snell Roundhand';
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 80%; /* 25.6px */
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.wait-you .item-text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+}
+
+.next-img-1 {
+  width: 13rem;
+}
+
+.next-img-2 {
+  width: 9.5rem;
+}
+
+.next-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 0.625rem;
+}
+
+.next-title {
+  padding-top: 2.25rem;
+
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1.875em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+
+  max-width: 12.0625rem;
+}
+
+.next-arrow {
+  display: block;
+  width: 2.625rem;
+  margin-left: 35%;
+  margin-bottom: 1.5rem;
+}
+
+.next-wrap {
+  position: relative;
+  padding: 0 1.25rem;
+
+  background-image: url(../img/wait-you/tree.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 10.625rem;
+  margin-bottom: 1.6875rem;
+}
+
+.next-day-text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+
+  max-width: 16.8125rem;
+
+  margin-bottom: 13.8125rem;
+}
+
+.next-day-text span {
+  font-weight: 500;
+}
+
+.next-day-morning {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+
+  max-width: 17.3125rem;
+
+  padding-bottom: 0.625rem;
+}
+
+.next-day-morning span {
+  font-weight: 500;
+}
+
+.close-arrow {
+  display: block;
+  width: 4.75rem;
+  margin: 0 1.25rem 0 auto;
+}
+
+.next-img-3 {
+  margin-top: -1.25rem;
+  width: 17.3125rem;
+  margin-bottom: 1.25rem;
+}
+
+.lunch-day-text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+
+  max-width: 20.8125rem;
+}
+
+.lunch-day-text span {
+  font-weight: 500;
+}
+
+/* dresscode */
+
+.dresscode {
+  padding-top: 6.25rem;
+  padding-bottom: 3.125rem;
+}
+
+.dresscode .container {
+}
+
+.dresscode .wrapper {
+  position: relative;
+  padding: 0 1.5rem;
+  padding-top: 3.75rem;
+  padding-bottom: 5rem;
+  border-radius: 1.25rem;
+  background: #d4e3ca;
+
+  margin-bottom: 1.25rem;
+}
+
+.dresscode .title {
+  color: #adc69d;
+  font-family: 'Snell Roundhand';
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 80%; /* 64px */
+  letter-spacing: -0.05em;
+  margin-bottom: 5rem;
+}
+
+.bow-img {
+  position: absolute;
+  right: -0.875rem;
+  top: 6.7rem;
+  width: 12rem;
+}
+
+.dresscode .desc {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1.625em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 26px */
+  text-transform: uppercase;
+
+  max-width: 14.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dresscode .text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.01em;
+  margin-bottom: 3.75rem;
+}
+
+.dresscode .margin10 {
+  margin-bottom: 0.625rem;
+}
+
+.dresscode .inner-wrapper {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  background: #fff;
+}
+
+.symbol {
+  position: absolute;
+  left: -0.625rem;
+  top: 50%;
+
+  width: 1.725rem;
+
+  transform: translate(0, -50%);
+}
+
+.dresscode .attention-text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.dresscode .attention-text span {
+  font-weight: 500;
+}
+
+.dresscode .family-photo {
+  display: block;
+  width: 100%;
+  margin: 0 auto 1.25rem;
+}
+
+.dresscode .wait-meet-text {
+  color: #090909;
+  font-family: 'Helvetica Neue';
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 25px */
+  text-transform: uppercase;
+
+  max-width: 17.1875rem;
+  margin-bottom: 3.75rem;
+}
+
+.dresscode .wait-meet-text span {
+  color: #789367;
+}
+
+.dresscode .with-love-box {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.3125rem;
+}
+
+.dresscode .red-heart {
+  width: 1.8125rem;
+  padding-bottom: 0.625rem;
+}
+
+.dresscode .love-text {
+  color: #090909;
+  text-align: right;
+  font-family: 'Snell Roundhand';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 85%; /* 20.4px */
+  letter-spacing: -0.015rem;
+
+  max-width: 8.25rem;
 }
