@@ -23,8 +23,10 @@
             />
             <h3 class="date">02.10.2025</h3>
           </div>
-          <h2 class="subtitle">Wedding day</h2>
-          <h1 class="title">Danyil & Anastasiya</h1>
+          <div class="hero-title-box">
+            <h2 class="subtitle">Wedding day</h2>
+            <h1 class="title">Danyil & Anastasiya</h1>
+          </div>
           <picture>
             <source
               srcset="
@@ -62,12 +64,15 @@
               fill="none"
             >
               <path
+                class="about-site-line-path"
                 d="M215.555 2C150.471 4.7241 -6.09954 -9.09091 2.32718 101.235C8.39085 180.623 194.082 90.1442 221.048 145.599C258.267 222.141 189.588 328.892 40.2787 286.279"
                 stroke="#ADC69D"
                 stroke-width="3"
-                stroke-dasharray="12 12"
+                stroke-linecap="round"
+                vector-effect="non-scaling-stroke"
               />
             </svg>
+
             <img
               class="about-site-lock"
               src="./src/img/about-site/lock.svg"
@@ -273,12 +278,12 @@
           <picture>
             <source
               srcset="
-                ./src/img/family-photo-1x.png 1x,
-                ./src/img/family-photo-2x.png 2x
+                ./src/img/family-photo-1x.jpg 1x,
+                ./src/img/family-photo-2x.jpg 2x
               " />
             <img
               class="family-photo"
-              src="./src/img/family-photo-1x.png"
+              src="./src/img/family-photo-1x.jpg"
               alt="family photo"
           /></picture>
           <h3 class="wait-meet-text">
@@ -297,5 +302,6 @@
       </section>
     </main>
     <footer class="footer"><div class="container"></div></footer>
+    <script type="module" src="./src/js/gsap.js"></script>
   </body>
 </html>

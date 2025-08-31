@@ -13,6 +13,7 @@
     "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "jquery": "^3.7.1",
     "modern-normalize": "^2.0.0"
   }
