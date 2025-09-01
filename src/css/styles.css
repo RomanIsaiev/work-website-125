@@ -584,7 +584,7 @@ body {
 
 .dresscode {
   padding-top: 6.25rem;
-  padding-bottom: 3.125rem;
+  /* padding-bottom: 3.125rem; */
 }
 
 .dresscode .container {
@@ -702,6 +702,8 @@ body {
   align-items: center;
   justify-content: end;
   gap: 0.3125rem;
+
+  margin-bottom: 3.75rem;
 }
 
 .dresscode .red-heart {
@@ -720,4 +722,20 @@ body {
   letter-spacing: -0.015rem;
 
   max-width: 8.25rem;
+}
+
+.site-created {
+  display: block;
+  color: #090909;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 16.8px */
+  text-decoration-line: underline;
+
+  padding: 0.625rem;
+  width: 100%;
+  background: rgba(173, 198, 157, 0.29);
 }
