@@ -40,11 +40,15 @@ body {
   top: 0;
   width: 100%;
   height: 100svh;
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 1;
 }
 
 .preloader-action .container {
   max-width: 430px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .preloader-text {
@@ -67,25 +71,43 @@ body {
 }
 
 .preloader-btn {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 
+  border-bottom: 0.0625rem solid #090909;
+
+  max-width: 14.375rem;
+  padding-bottom: 0.375rem;
+  margin: 0 auto;
+}
+
+.preloader-image {
+  display: block;
+  width: 100%;
+}
+
+.preloader-heart {
+  width: 1.5625rem;
+}
+
+.preloader-arrow {
+  display: block;
+  width: 6rem;
+  margin-top: -4rem;
+  margin-left: 50%;
+  margin-bottom: 1.5625rem;
+}
+
+.preloader-btn-text {
   color: #090909;
-  text-align: center;
   font-family: 'Helvetica Neue';
-  font-size: 1em;
+  font-size: 1.25em;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 2.2rem */
+  line-height: 110%; /* 22px */
   text-transform: uppercase;
-  padding: 2rem 3rem;
-
-  -webkit-appearance: none;
-  appearance: none;
-  border: inherit;
-  background-color: #adc69d;
 }
 
 .section {
@@ -248,9 +270,9 @@ body {
 .about-site-lock {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0.5rem;
   /* transform: translateX(-50px); */
-  margin-left: -3.125rem;
+  margin-left: -4.125rem;
   width: 11.25rem;
 }
 
@@ -276,9 +298,12 @@ body {
   margin: 0 0 0 auto;
 }
 
-.just-bg {
-  width: 100%;
-  height: 48rem;
+/* meet place */
+
+.meet-place {
+  padding-top: 8.5625rem;
+  padding-bottom: 8.125rem;
+
   background-image: url(../img/just-bg-1x.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -288,15 +313,84 @@ body {
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .just-bg {
+  .meet-place {
     background-image: url(../img/just-bg-2x.png);
   }
+}
+
+.meet-place .container {
+}
+
+.meet-place .subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Helvetica Neue';
+  font-size: 2.625em;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 110%; /* 46.2px */
+  text-transform: uppercase;
+}
+
+.meet-place .title {
+  margin-top: -1rem;
+  margin-left: -0.375rem;
+
+  color: #fff;
+  font-family: 'Snell Roundhand';
+  font-size: 3.6875em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 80%; /* 47.2px */
+  letter-spacing: -0.0369em;
+}
+
+.meet-place .meet-place-arrow {
+  display: block;
+  margin: 0.625rem 3rem 1rem auto;
+  width: 2.5rem;
+}
+
+.meet-place .meet-place-arrow-path {
+}
+
+.meet-place .tap-on-map {
+  color: #fff;
+  font-family: 'Helvetica Neue';
+  font-size: 0.75em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%; /* 13.2px */
+
+  margin-bottom: 0.75rem;
+}
+
+.meet-place .map {
+  width: 100%;
+  height: auto;
+
+  border-radius: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.meet-place .position-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meet-place .address {
+  color: #fff;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%; /* 17.6px */
 }
 
 /* wait-you */
 
 .wait-you {
-  padding: 5rem 0;
+  padding: 5rem 0 0;
 }
 
 .wait-you .container {
@@ -563,11 +657,8 @@ body {
 .symbol {
   position: absolute;
   left: -0.625rem;
-  top: 50%;
 
   width: 1.725rem;
-
-  transform: translate(0, -50%);
 }
 
 .dresscode .attention-text {
